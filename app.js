@@ -27,3 +27,29 @@ const generateRandomQuote = () => {
 };
 
 button.addEventListener('click', generateRandomQuote);
+
+const themeToggle = document.getElementById('theme-toggle');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+
+// Verifica o tema atual e aplica o tema salvo no localStorage
+const applyTheme = () => {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+};
+
+// Alterna entre os temas
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const theme = document.body.classList.contains('dark-mode')
+    ? 'dark'
+    : 'light';
+  localStorage.setItem('theme', theme);
+  applyTheme();
+});
+
+// Aplica o tema ao carregar a página
+applyTheme();
