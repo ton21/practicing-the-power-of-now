@@ -12,6 +12,10 @@ const quotes = [
   'Quanto mais você se identificar com sua mente, mais você irá sofrer.',
   'É a corrente de pensamentos que cria a ilusão de separação.',
   'A mente é um instrumento incrível se você souber usá-la',
+  'Não resista à sua vida.',
+  'Viva no agora, o futuro não existe. O passado é apenas uma lembrança',
+  'O futuro é uma ilusão',
+  'O que você resistir tende a persistir.',
 ];
 
 const quoteElement = document.querySelector('#quote');
